@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: Roboto,sans-serif;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* -------------------- Media stuff ------------------ */
+
+@media (min-width: 701px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 8px;
+    }
+
+    #how-it-works {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+#hero {
+    background-color: #0A4871;
+    /* Added by Matija, not sure if ok */
+    padding: 3rem 0;
+}
+
+#hero h1 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#hero h2 {
+    font-weight: 200;
+    font-size: 3rem;
+    margin-top: 1rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* ------------------------- "Pick username" form -------------------------- */
+
+#signup-form {
+    margin: 4rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#signup-form .form-step-1 {
+    /*
+    display: flex;
+    display: -webkit-flex;
+    */
+
+    max-width: 50rem;
+    margin: 0 auto;
+
+    padding: 1rem;
+}
+
+#hero #claim-username {
+    background-color: #255F7D;
+}
+
+#hero #claim-username:focus {
+    border: 1px solid #4BA0CE;
+}
+
+#signup-form #claim-username-button:hover {
+    background-color: #2696D4;
+}
+
+#signup-form #claim-username {
+    padding: 1.2rem;
+    margin-right: 1.5rem;
+    margin-left: 0.5rem;
+
+    outline: 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    color: #FFF;
+    font-size: 1.8rem;
+    font-family: Roboto,sans-serif;
+
+    /*
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    */
+}
+
+#signup-form #claim-username-button {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Roboto,sans-serif;
+
+    padding: 1.2rem 2rem;
+    background-color: #0169A2;
+    color: #FFF;
+
+    border: 0;
+    border-radius: 5px;
+}
+
+#getslides-url {
+    font-size: 1.8rem;
+}
+
+/* ------------------------ How it works - experimental ------------------------- */
+
+#how-it-works {
+    color: #000; /* So I can see the text. */
+    /*border: 1px solid #000;*/
+
+    font-size: 1.8rem;
+
+    display: flex;
+    margin-top: 3rem;
+}
+
+#how-it-works .hiw-step {
+    /*border: 1px solid #FF0000;*/
+
+    text-align: center;
+    padding: 1rem 4rem;
+
+    flex-grow: 1;
+}
+
+/* ------------- Styling of a "How it works" step ------------- */
+
+.hiw-step img {
+    max-width: 20rem;
+}
+
+.hiw-step h4 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+.hiw-step .description {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
