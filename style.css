@@ -136,7 +136,7 @@ h2 {
 
 #how-it-works {
     color: #000; /* So I can see the text. */
-    /*border: 1px solid #000;*/
+    border: 1px solid #000;
 
     font-size: 1.8rem;
 
@@ -145,7 +145,7 @@ h2 {
 }
 
 #how-it-works .hiw-step {
-    /*border: 1px solid #FF0000;*/
+    border: 1px solid #FF0000;
 
     text-align: center;
     padding: 1rem 4rem;
