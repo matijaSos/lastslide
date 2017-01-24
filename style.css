@@ -40,8 +40,6 @@ h2 {
 
 #hero {
     background-color: #0A4871;
-    /* Added by Matija, not sure if ok */
-    padding: 3rem 0;
 }
 
 #hero h1 {
@@ -62,6 +60,44 @@ h2 {
 .container {
     max-width: 1060px;
     margin: 0 auto;
+}
+
+#hero .container {
+    padding: .5rem 0 0 0;
+}
+
+/* ------------------------ Header ------------------------ */
+
+.logo-header {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.logo-header .container {
+    /* NOTE(matija): I also need -webkit prefixes, use autoprefixer? */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-header .container nav {
+    font-size: 1.3rem;
+}
+
+.logo-header .container nav a {
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 3rem;
+    opacity: .7;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+    background-image: url(http://kite.com/css/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* ------------------------- "Pick username" form -------------------------- */
