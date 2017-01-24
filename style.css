@@ -152,7 +152,7 @@ h2 {
     flex-grow: 1;
 }
 
-/* ------------- Styling of a "How it works" step ------------- */
+/* ------------- Styling of a single "How it works" step ------------- */
 
 .hiw-step img {
     max-width: 20rem;
