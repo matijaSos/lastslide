@@ -39,7 +39,12 @@ h2 {
 }
 
 #hero {
-    background-color: #0A4871;
+    /*background-color: #0A4871;*/
+    padding-bottom: 5rem;
+
+    background-image: url(https://res.cloudinary.com/hashnode/image/upload/w_1600/v1484831100/ama_banners/stoiber-ama.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 #hero h1 {
@@ -51,10 +56,11 @@ h2 {
 #hero h2 {
     font-weight: 200;
     font-size: 3rem;
-    margin-top: 1rem;
 
     max-width: 900px;
+    
     margin: 0 auto;
+    margin-top: 1rem;
 }
 
 .container {
@@ -63,7 +69,7 @@ h2 {
 }
 
 #hero .container {
-    padding: .5rem 0 0 0;
+    padding: 1rem 0 0 0;
 }
 
 /* ------------------------ Header ------------------------ */
