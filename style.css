@@ -35,6 +35,7 @@ h4 {
 
     .feature .container img {
         width: 500px;
+        height: auto;
     }
 
 }
