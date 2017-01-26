@@ -14,11 +14,27 @@ h2 {
     text-align: center;
 }
 
+h4 {
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 0;
+}
+
 /* -------------------- Media stuff ------------------ */
 
 @media (min-width: 701px) {
     html {
         font-size: 10px;
+    }
+
+    .feature .container img {
+        width: 500px;
+    }
+
+    .feature .container {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -233,4 +249,25 @@ h2 {
 .hiw-step .description {
     font-size: 1.6rem;
     font-weight: 300;
+}
+
+/* ------------- Feature ------------- */
+
+.feature {
+    padding: 6rem 0;
+}
+
+.feature h4 {
+    color: #0E222F;
+}
+
+.feature p {
+    color: #0E222F;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.feature .container .feature-content {
+    padding: 1rem 4rem;
+
 }
