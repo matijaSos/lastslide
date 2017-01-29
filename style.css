@@ -53,6 +53,12 @@ h4 {
         flex-direction: column;
     }
 
+    .feature {
+        /* NOTE(matija): !important to override 6rem. Not sure if the best way, but this is how Kite did it. */
+        padding-bottom: 2rem!important;
+        padding-top: 2rem!important;
+    }
+
     .feature .container {
         display: flex;
         flex-direction: column;
