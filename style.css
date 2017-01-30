@@ -53,6 +53,26 @@ h4 {
         flex-direction: column;
     }
 
+
+    /* HACKY PART: Make "How it works section bigger. */
+    .hiw-step h4 {
+        font-size: 2.5rem!important;
+    }
+    .hiw-step .description {
+        font-size: 2rem!important;
+    }
+
+    .hiw-step img {
+        max-width: 25rem!important;
+    }
+
+    .hiw-step {
+        margin-bottom: 5rem!important;
+    }
+
+    /* ---------------------------------------------- */
+
+
     .feature {
         /* NOTE(matija): !important to override 6rem. Not sure if the best way, but this is how Kite did it. */
         padding-bottom: 2rem!important;
@@ -74,6 +94,25 @@ h4 {
     html {
         font-size: 7px;
     }
+
+
+    /* HACKY PART: Make "How it works section bigger. */
+    .hiw-step h4 {
+        font-size: 3rem!important;
+    }
+    .hiw-step .description {
+        font-size: 2rem!important;
+    }
+
+    .hiw-step img {
+        max-width: 40rem!important;
+    }
+
+    .hiw-step {
+        margin-bottom: 6rem!important;
+    }
+    /* ---------------------------------------------- */
+
 }
 
 #hero {
@@ -251,7 +290,7 @@ h4 {
     /*border: 1px solid #FF0000;*/
 
     text-align: center;
-    padding: 1rem 4rem;
+    padding: 1.5rem 4rem;
 
     flex-grow: 1;
 }
@@ -259,7 +298,7 @@ h4 {
 /* ------------- Styling of a single "How it works" step ------------- */
 
 .hiw-step img {
-    max-width: 20rem;
+    max-width: 25rem;
 }
 
 .hiw-step h4 {
