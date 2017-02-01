@@ -41,7 +41,6 @@ h4 {
     .feature.screenshot-first .container .feature-content {
         order: 2;
     }
-
 }
 
 @media (max-width: 700px) {
@@ -54,7 +53,7 @@ h4 {
     }
 
 
-    /* HACKY PART: Make "How it works section bigger. */
+    /* HACKY PART: Make "How it works" section bigger. */
     .hiw-step h4 {
         font-size: 2.5rem!important;
     }
@@ -69,7 +68,6 @@ h4 {
     .hiw-step {
         margin-bottom: 5rem!important;
     }
-
     /* ---------------------------------------------- */
 
 
@@ -96,7 +94,7 @@ h4 {
     }
 
 
-    /* HACKY PART: Make "How it works section bigger. */
+    /* HACKY PART: Make "How it works" section bigger on phone. */
     .hiw-step h4 {
         font-size: 3rem!important;
     }
@@ -210,7 +208,7 @@ h4 {
 /* ------------------------- "Pick username" form -------------------------- */
 
 #signup-form {
-    margin: 4rem auto;
+    margin-top: 4rem;
     padding: 1rem;
     text-align: center;
 }
@@ -227,19 +225,15 @@ h4 {
     padding: 1rem;
 }
 
-#hero #claim-username {
-    background-color: #255F7D;
-}
-
-#hero #claim-username:focus {
+#signup-form #claim-username-input:focus {
     border: 1px solid #4BA0CE;
 }
 
 #signup-form #claim-username-button:hover {
-    background-color: #2696D4;
+    opacity: 1;
 }
 
-#signup-form #claim-username {
+#signup-form #claim-username-input {
     padding: 1.2rem;
     margin-right: 1.5rem;
     margin-left: 0.5rem;
@@ -249,7 +243,10 @@ h4 {
     border-radius: 5px;
 
     color: #FFF;
+    background-color: #255F7D;
+
     font-size: 1.8rem;
+    font-weight: 300;
     font-family: Roboto,sans-serif;
 
     /*
@@ -260,12 +257,16 @@ h4 {
 
 #signup-form #claim-username-button {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 500;
     font-family: Roboto,sans-serif;
 
+    text-transform: uppercase;
+    letter-spacing: .4px;
+
     padding: 1.2rem 2rem;
-    background-color: #0169A2;
-    color: #FFF;
+    background-color: #FFF;
+    color: #786DD1;
+    opacity: .9;
 
     border: 0;
     border-radius: 5px;
@@ -273,6 +274,7 @@ h4 {
 
 #getslides-url {
     font-size: 1.8rem;
+    font-weight: 300;
 }
 
 /* ------------------------ How it works - experimental ------------------------- */
@@ -312,7 +314,32 @@ h4 {
     font-weight: 300;
 }
 
-/* ------------- Feature ------------- */
+/* ------------------------ Claim username -------------------------- */
+
+#claim-username {
+    margin-top: 6rem;
+    padding: 8rem;
+
+    background-color: #786DD1;
+}
+
+#claim-username .container {
+}
+
+#claim-username h1 {
+    font-size: 3.8rem;
+    font-weight: 400;
+}
+
+#claim-username p {
+    text-align: center;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+
+/* ---------------------------- Feature ------------------------------ */
 
 .feature {
     padding: 6rem 0;
