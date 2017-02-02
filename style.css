@@ -216,23 +216,32 @@ h4 {
 }
 
 #hero #get-started-button {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
 
     text-decoration: none;
 
     background-color: #FFF;
     color: #1677BE;
-    opacity: .9;
 
     padding: 2rem 4rem;
     border-radius: .5rem;
 
     transition: ease all .3s;
+
+    /* ConvertKit style */
+    text-transform: uppercase;
+    letter-spacing: .4px;
+
+    /*
+    padding: 16px 50px;
+    line-height: 1.9;
+    font-size: 15px;
+    */
 }
 
 #hero #get-started-button:hover {
-    opacity: 1;
     background-color: #1677BE;
     color: #FFF;
 }
@@ -250,6 +259,9 @@ h4 {
     display: flex;
     display: -webkit-flex;
     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     max-width: 50rem;
     margin: 0 auto;
@@ -288,11 +300,16 @@ h4 {
 }
 
 #signup-form #claim-username-button {
-    font-size: 2.2rem;
-    font-weight: 700;
-    font-family: Roboto,sans-serif;
+    -webkit-appearance: none; /* To look good on iPhone. */
 
-    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Open Sans",sans-serif;
+
+    padding: 1.55rem 2rem;
+
+    text-transform: uppercase;
+    letter-spacing: .4px;
 
     background-color: #FFF;
     color: #786DD1;
