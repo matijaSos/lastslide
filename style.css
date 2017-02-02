@@ -115,7 +115,7 @@ h4 {
 
 #hero {
     /*background-color: #0A4871;*/
-    padding-bottom: 5rem;
+    padding-bottom: 12rem;
 
     /*
     background-image: url(assets/lastslide_hero_audience_gdc.jpg);
@@ -205,6 +205,38 @@ h4 {
     background-repeat: no-repeat;
 }
 
+/* ------------------------- "Get Started" button -------------------------- */
+
+#hero #get-started-holder {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+
+    margin-top: 10rem;
+}
+
+#hero #get-started-button {
+    font-size: 2.5rem;
+    font-weight: 300;
+
+    text-decoration: none;
+
+    background-color: #FFF;
+    color: #1677BE;
+    opacity: .9;
+
+    padding: 2rem 4rem;
+    border-radius: .5rem;
+
+    transition: ease all .3s;
+}
+
+#hero #get-started-button:hover {
+    opacity: 1;
+    background-color: #1677BE;
+    color: #FFF;
+}
+
 /* ------------------------- "Pick username" form -------------------------- */
 
 #signup-form {
@@ -245,8 +277,8 @@ h4 {
     color: #FFF;
     background-color: #255F7D;
 
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: normal; /* 300 for thinner. */
     font-family: Roboto,sans-serif;
 
     /*
@@ -256,25 +288,30 @@ h4 {
 }
 
 #signup-form #claim-username-button {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 700;
     font-family: Roboto,sans-serif;
 
-    text-transform: uppercase;
-    letter-spacing: .4px;
-
     padding: 1.2rem 2rem;
+
     background-color: #FFF;
     color: #786DD1;
     opacity: .9;
+
+    cursor: pointer;
 
     border: 0;
     border-radius: 5px;
 }
 
-#getslides-url {
-    font-size: 1.8rem;
+#bitly-url {
+    font-style: italic;
     font-weight: 300;
+}
+
+#getslides-url {
+    font-size: 2.2rem;
+    font-weight: normal; /* 300 for thinner. */
 }
 
 /* ------------------------ How it works - experimental ------------------------- */
@@ -334,7 +371,7 @@ h4 {
 #claim-username p {
     text-align: center;
 
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 300;
 }
 
