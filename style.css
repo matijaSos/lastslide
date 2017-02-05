@@ -227,7 +227,11 @@ h4 {
 #hero #get-started-holder {
     display: flex;
     display: -webkit-flex;
-    justify-content: center;
+
+    flex-flow: column;
+    align-items: center;
+
+    justify-content: flex-start;
 
     margin-top: 10rem;
 }
@@ -261,6 +265,17 @@ h4 {
 #hero #get-started-button:hover {
     background-color: #1677BE;
     color: #FFF;
+}
+
+#hero #learn-more {
+    margin-top: 3rem;
+
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    color: #FFF;
+    opacity: 0.7;
 }
 
 /* ------------------------- "Pick username" form -------------------------- */
