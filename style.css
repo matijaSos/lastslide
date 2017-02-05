@@ -70,7 +70,6 @@ h4 {
     }
     /* ---------------------------------------------- */
 
-
     .feature {
         /* NOTE(matija): !important to override 6rem. Not sure if the best way, but this is how Kite did it. */
         padding-bottom: 2rem!important;
@@ -93,8 +92,19 @@ h4 {
         font-size: 7px;
     }
 
+    /* HACKY PART: Keep certain sections the original size. */
+    #hero h1 {
+        font-size: 6rem!important;
+    }
+    #hero h2 {
+        font-size: 3.1rem!important;
+    }
+    #hero #get-started-button {
+        font-size: 2.3rem!important;
+        padding: 3rem 7.5rem!important;
+        border-radius: 0.8rem!important;
+    }
 
-    /* HACKY PART: Make "How it works" section bigger on phone. */
     .hiw-step h4 {
         font-size: 3rem!important;
     }
@@ -115,7 +125,7 @@ h4 {
 
 #hero {
     /*background-color: #0A4871;*/
-    padding-bottom: 12rem;
+    padding-bottom: 15rem;
 
     /*
     background-image: url(assets/lastslide_hero_audience_gdc.jpg);
@@ -147,7 +157,7 @@ h4 {
 }
 
 #hero h1 {
-    font-size: 3.8rem;
+    font-size: 4.5rem;
     font-weight: 400;
     font-style: italic;
 }
@@ -204,6 +214,13 @@ h4 {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+/* ------------------------- Main content (value prop + button ) -------------------------- */
+
+.main-content {
+    margin: 10rem 0;
+}
+
 
 /* ------------------------- "Get Started" button -------------------------- */
 
