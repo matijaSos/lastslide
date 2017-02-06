@@ -1,6 +1,9 @@
 body {
     margin: 0;
     font-family: Roboto,sans-serif;
+
+    /*font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;*/
+
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
 }
@@ -12,6 +15,7 @@ h1 {
 
 h2 {
     text-align: center;
+    margin: 0;
 }
 
 h4 {
@@ -48,7 +52,7 @@ h4 {
         font-size: 8px;
     }
 
-    #how-it-works {
+    #how-it-works-steps {
         flex-direction: column;
     }
 
@@ -94,10 +98,10 @@ h4 {
 
     /* HACKY PART: Keep certain sections the original size. */
     #hero h1 {
-        font-size: 6rem!important;
+        font-size: 4.6rem!important;
     }
     #hero h2 {
-        font-size: 3.1rem!important;
+        font-size: 3.0rem!important;
     }
     #hero #get-started-button {
         font-size: 2.3rem!important;
@@ -106,6 +110,14 @@ h4 {
     }
     #hero #learn-more {
         font-size: 2.3rem!important;
+    }
+
+    #hiw-heading-class {
+        font-size: 2.2rem!important;
+
+    }
+    #hiw-heading-title {
+        font-size: 4rem!important;
     }
 
     .hiw-step h4 {
@@ -368,18 +380,41 @@ h4 {
     font-weight: normal; /* 300 for thinner. */
 }
 
-/* ------------------------ How it works - experimental ------------------------- */
+/* ------------------------ How it works ------------------------- */
 
 #how-it-works {
+    margin-top: 8rem;
+}
+
+#how-it-works-heading {
+    text-align: center;
+}
+
+#how-it-works-heading #hiw-heading-class {
+    color: rgba(0,0,0,.35);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    margin: 0;
+    margin-bottom: 0.35rem;
+}
+
+#how-it-works-heading #hiw-heading-title {
+    color: #545454;
+    font-weight: 300;
+    font-size: 3.3rem;
+}
+
+#how-it-works-steps {
     color: #000; /* So I can see the text. */
 
     font-size: 1.8rem;
 
     display: flex;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
-#how-it-works .hiw-step {
+#how-it-works-steps .hiw-step {
     /*border: 1px solid #FF0000;*/
 
     text-align: center;
