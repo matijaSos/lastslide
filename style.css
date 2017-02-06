@@ -120,6 +120,9 @@ h4 {
         font-size: 4rem!important;
     }
 
+    .hiw-step .hiw-step-title {
+        font-size: 2.3rem!important;
+    }
     .hiw-step h4 {
         font-size: 3rem!important;
     }
@@ -396,7 +399,7 @@ h4 {
     text-transform: uppercase;
 
     margin: 0;
-    margin-bottom: 0.35rem;
+    margin-top: 1.5rem;
 }
 
 #how-it-works-heading #hiw-heading-title {
@@ -411,7 +414,7 @@ h4 {
     font-size: 1.8rem;
 
     display: flex;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 #how-it-works-steps .hiw-step {
@@ -421,6 +424,21 @@ h4 {
     padding: 1.5rem 4rem;
 
     flex-grow: 1;
+}
+
+.hiw-step .hiw-step-title {
+    /*
+    color: rgba(0,0,0,.35);
+    */
+    color: #1677BE;
+    opacity: 0.8;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
 }
 
 /* ------------- Styling of a single "How it works" step ------------- */
