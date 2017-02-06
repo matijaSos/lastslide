@@ -399,7 +399,7 @@ h4 {
     text-transform: uppercase;
 
     margin: 0;
-    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #how-it-works-heading #hiw-heading-title {
@@ -414,7 +414,7 @@ h4 {
     font-size: 1.8rem;
 
     display: flex;
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 #how-it-works-steps .hiw-step {
@@ -467,11 +467,15 @@ h4 {
     background-color: #786DD1;
 }
 
-#claim-username .container {
-}
-
 #claim-username h1 {
     font-size: 3.8rem;
+    font-weight: 400;
+}
+
+#claim-username h2 {
+    margin-top: 4rem;
+
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
