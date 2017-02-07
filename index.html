@@ -8,6 +8,12 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:100' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
 
+    <!-- TODO(matija): I took this version from Kite. Which version should I be using? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- TODO(matija): This will have to be minified -->
+    <script type="text/javascript" src="lastslide.js"></script>
+
     <!-- Leo Slackbot font
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type='text/css'>
     -->
@@ -102,8 +108,10 @@
                             autocapitalize="off"
                             spellcheck="false">
                     <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
-                </form>
 
+                </form>
+                <!-- TODO(matija): Put this somewhere appropriate -->
+                <div class="subscribe-fail">Hey I failed</div>
             </div>
 
             <h2>No more <span id="bitly-url">bit.ly/myPresTitleV23<span></h2>
