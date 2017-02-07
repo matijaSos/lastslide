@@ -211,6 +211,11 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* For Safari, TODO: use autoprefixer for this */
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
 }
 
 .logo-header .container nav {
@@ -244,12 +249,17 @@ h4 {
 
 #hero #get-started-holder {
     display: flex;
-    display: -webkit-flex;
 
     flex-flow: column;
     align-items: center;
 
     justify-content: flex-start;
+
+    /* For Safari, TODO: use autoprefixer for this */
+    display: -webkit-flex;
+    -webkit-flex-flow: column;
+    -webkit-align-items: center;
+    -webkitjustify-content: flex-start;
 
     margin-top: 10rem;
 }
