@@ -41,6 +41,13 @@ h5 {
         font-size: 10px;
     }
 
+    .options {
+        column-count: 3;
+        /* For Safari, TODO: use autoprefixer for this */
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+    }
+
     .feature .container {
         display: flex;
         align-items: center;
@@ -350,6 +357,7 @@ h5 {
     margin-top: 1rem;
 }
 
+/* ------ Step 1 ------ */
 #signup-form .form-step-1 {
     display: flex;
     align-items: center;
@@ -365,6 +373,42 @@ h5 {
 
     padding: 1rem;
 }
+
+/* ------ Step 2 ------ */
+#signup-form .survey {
+    text-align: left;
+    padding: 1rem;
+}
+
+#signup-form .survey p {
+    text-align: left;
+}
+
+#signup-form .survey .option:first-child {
+    margin-top: 0;
+}
+
+#signup-form .survey .option {
+    font-size: 18px;
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+
+    background-color: rgba(255,255,255,.2);
+    transition: 125ms background-color;
+
+    /* Not sure if I need this, seems to work okay without it.
+     *
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    */
+}
+
+#signup-form .survey .option:hover {
+    background-color: rgba(255,255,255,.3)
+}
+
 
 /* TODO(matija): Currently, this is the same as step-1, maybe put together? */
 #signup-form .form-step-3 {
@@ -388,6 +432,9 @@ h5 {
     display: none;
 }
 #signup-form.step-2 form:not(.form-step-2){
+    display: none;
+}
+#signup-form.step-3 form:not(.form-step-3){
     display: none;
 }
 

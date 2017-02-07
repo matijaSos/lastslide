@@ -60,7 +60,12 @@ $(document).ready(function() {
       goToNextStep();
     });
 
-    $('.form-step-2').submit(function (event) {
+    $('#signup-form .option').off('click').on('click', function (event) {
+      // Do something with $(this).text()
+      goToNextStep();
+    });
+
+    $('.form-step-3').submit(function (event) {
       event.preventDefault();
       submitEmail();
       //goToNextStep();
