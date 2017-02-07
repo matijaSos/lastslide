@@ -19,10 +19,19 @@ h2 {
 }
 
 h4 {
+    text-align: center;
     font-size: 3rem;
     font-weight: 300;
-
     margin: 0;
+}
+
+h5 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    color: #f1e1ff;
 }
 
 /* -------------------- Media stuff ------------------ */
@@ -324,9 +333,21 @@ h4 {
 /* ------------------------- "Pick username" form -------------------------- */
 
 #signup-form {
-    margin-top: 4rem;
+    margin: 4rem auto;
+    max-width: 74rem;
     padding: 1rem;
     text-align: center;
+}
+
+#signup-form.step-2 {
+    background-color: rgba(255,255,255,.05);
+}
+
+#signup-form h4 {
+    color: #eba7ff;
+}
+#signup-form h5 {
+    margin-top: 1rem;
 }
 
 #signup-form .form-step-1 {
@@ -346,7 +367,7 @@ h4 {
 }
 
 /* TODO(matija): Currently, this is the same as step-1, maybe put together? */
-#signup-form .form-step-2 {
+#signup-form .form-step-3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -362,6 +383,13 @@ h4 {
     padding: 1rem;
 }
 
+/* If currently step-x is shown, hide all other steps. */
+#signup-form.step-1 form:not(.form-step-1){
+    display: none;
+}
+#signup-form.step-2 form:not(.form-step-2){
+    display: none;
+}
 
 /* General styling for buttons in signup form. */
 .signup-form-button {
@@ -512,7 +540,7 @@ h4 {
 
 #claim-username {
     margin-top: 6rem;
-    padding: 8rem;
+    padding: 8rem 0;
 
     background-color: #786DD1;
 }

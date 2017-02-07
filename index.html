@@ -87,7 +87,7 @@
             <h1>Choose your name</h1>
             <p>... and use it on every presentation!</p>
 
-            <div id="signup-form">
+            <div id="signup-form" class="step-2">
                 <form class="form-step-1">
                     <span id="getslides-url">getslid.es/</span>
                     <input id="claim-username-input" class="signup-form-input" 
@@ -101,6 +101,11 @@
                 </form>
 
                 <form class="form-step-2">
+                    <h4>Great, we're preparing your invite!</h4>
+                    <h5>Selecting your preferences below will expedite your invitation - please feel free to share!</h5>
+                </form>
+
+                <form class="form-step-3">
                     <!-- TODO: some message goes here, like 'We're preparing your invite!' -->
                     <input id="signup-email-input" class="signup-form-input" type="text" name="email" placeholder="Email"
                             size="31"
@@ -108,10 +113,12 @@
                             autocapitalize="off"
                             spellcheck="false">
                     <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
-
+                    <!-- TODO(matija): Put this somewhere appropriate -->
+                    <!--
+                    <div class="subscribe-fail">Hey I failed</div>
+                    -->
                 </form>
-                <!-- TODO(matija): Put this somewhere appropriate -->
-                <div class="subscribe-fail">Hey I failed</div>
+
             </div>
 
             <h2>No more <span id="bitly-url">bit.ly/myPresTitleV23<span></h2>

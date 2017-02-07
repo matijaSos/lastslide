@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
 
+    var step = 1;
+    function goToNextStep () {
+      $('#signup-form').removeClass('step-' + step++).addClass('step-' + step);
+    }
+
     function validateEmail(email) {
       var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
       return re.test(email);
@@ -48,9 +53,17 @@ $(document).ready(function() {
         });
     };
 
-    $('.form-step-2').submit(function (event) {
-      submitEmail();
+    // -------------------- //
+
+    $('.form-step-1').submit(function (event) {
       event.preventDefault();
+      goToNextStep();
+    });
+
+    $('.form-step-2').submit(function (event) {
+      event.preventDefault();
+      submitEmail();
+      //goToNextStep();
     });
 });
 
