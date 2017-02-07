@@ -35,15 +35,25 @@ h4 {
     .feature .container {
         display: flex;
         align-items: center;
+
+        /* For Safari, TODO: use autoprefixer for this */
+        display: -webkit-flex;
+        -webkit-align-items: center;
     }
 
     .feature .container img {
         width: 500px;
         height: auto;
+
+        flex-shrink: 0;
+        /* For Safari, TODO: use autoprefixer for this */
+        -webkit-flex-shrink: 0;
     }
 
     .feature.screenshot-first .container .feature-content {
         order: 2;
+        /* For Safari, TODO: use autoprefixer for this */
+        -webkit-order: 2;
     }
 }
 
@@ -54,6 +64,8 @@ h4 {
 
     #how-it-works-steps {
         flex-direction: column;
+        /* For Safari, TODO: use autoprefixer for this */
+        -webkit-flex-direction: column;
     }
 
 
@@ -318,13 +330,14 @@ h4 {
 }
 
 #signup-form .form-step-1 {
-    /*
-    display: flex;
-    display: -webkit-flex;
-    */
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* For Safari, TODO: use autoprefixer for this */
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
 
     max-width: 50rem;
     margin: 0 auto;
@@ -420,10 +433,12 @@ h4 {
 
 #how-it-works-steps {
     color: #000; /* So I can see the text. */
-
     font-size: 1.8rem;
 
     display: flex;
+    /* For Safari, TODO: use autoprefixer for this */
+    display: -webkit-flex;
+
     margin-top: 6rem;
 }
 
@@ -434,6 +449,8 @@ h4 {
     padding: 1.5rem 4rem;
 
     flex-grow: 1;
+    /* For Safari, TODO: use autoprefixer for this */
+    -webkit-flex-grow: 1;
 }
 
 .hiw-step .hiw-step-title {
