@@ -84,13 +84,26 @@
             <div id="signup-form">
                 <form class="form-step-1">
                     <span id="getslides-url">getslid.es/</span>
-                    <input id="claim-username-input" type="text" name="username" placeholder="username"
+                    <input id="claim-username-input" class="signup-form-input" 
+                            type="text" name="username" 
+                            placeholder="username"
                             size="15"
                             autocorrect="off"
                             autocapitalize="off"
                             spellcheck="false">
-                    <input id="claim-username-button" type="submit" value="Claim">
+                    <input id="claim-username-button" class="signup-form-button" type="submit" value="Claim">
                 </form>
+
+                <form class="form-step-2">
+                    <!-- TODO: some message goes here, like 'We're preparing your invite!' -->
+                    <input id="signup-email-input" class="signup-form-input" type="text" name="email" placeholder="Email"
+                            size="31"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            spellcheck="false">
+                    <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
+                </form>
+
             </div>
 
             <h2>No more <span id="bitly-url">bit.ly/myPresTitleV23<span></h2>
