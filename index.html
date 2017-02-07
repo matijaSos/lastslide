@@ -113,14 +113,19 @@
                     </div>
                 </form>
 
-                <form class="form-step-3">
-                    <!-- TODO: some message goes here, like 'We're preparing your invite!' -->
-                    <input id="signup-email-input" class="signup-form-input" type="text" name="email" placeholder="Email"
-                            size="31"
-                            autocorrect="off"
-                            autocapitalize="off"
-                            spellcheck="false">
-                    <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
+                <form id="submit-email-form" class="form-step-3">
+                    <h4>Just one more step!</h4>
+                    <h5>Please enter your email so we can identify you.</h5>
+
+                    <div class="submit-email-wrapper">
+                        <input id="signup-email-input" class="signup-form-input" type="text" name="email" placeholder="Email"
+                                size="25"
+                                autocorrect="off"
+                                autocapitalize="off"
+                                spellcheck="false">
+                        <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
+                    </div>
+
                     <!-- TODO(matija): Put this somewhere appropriate -->
                     <!--
                     <div class="subscribe-fail">Hey I failed</div>

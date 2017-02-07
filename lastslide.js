@@ -11,7 +11,7 @@ $(document).ready(function() {
       return re.test(email);
     }
 
-    var jForm = $(this).find('.form-step-2');
+    var jForm = $(this).find('#submit-email-form');
     var jFail = $(this).find('.subscribe-fail');
 
     //var spinner = Ladda.create(jForm.find('button.submit')[0]);
