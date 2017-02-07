@@ -68,7 +68,8 @@ $(document).ready(function() {
     $('.form-step-3').submit(function (event) {
       event.preventDefault();
       submitEmail();
-      //goToNextStep();
+      // TODO(matija): go to next step only if everything is ok, call it from submitEmail method?
+      goToNextStep();
     });
 });
 

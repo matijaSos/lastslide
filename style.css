@@ -345,11 +345,8 @@ h5 {
     text-align: center;
 }
 
-#signup-form.step-2 {
-    background-color: rgba(255,255,255,.05);
-}
-#signup-form.step-3 {
-    background-color: rgba(255,255,255,.05);
+#signup-form.step-2, #signup-form.step-3, #signup-form.step-4 {
+    background-color: rgba(255,255,255,.08);
 }
 
 #signup-form h4 {
@@ -411,7 +408,6 @@ h5 {
     background-color: rgba(255,255,255,.3)
 }
 
-
 /* TODO(matija): Currently, this is similar to step-1, maybe put together? */
 #signup-form .submit-email-wrapper {
     display: flex;
@@ -438,6 +434,9 @@ h5 {
     display: none;
 }
 #signup-form.step-3 form:not(.form-step-3){
+    display: none;
+}
+#signup-form.step-4 form:not(.form-step-4){
     display: none;
 }
 
