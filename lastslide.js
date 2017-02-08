@@ -103,5 +103,10 @@ $(document).ready(function() {
       event.preventDefault();
       submitEmail();
     });
+
+    // ----------- Smooth scrolling ---------- //
+    $('#hero nav a').smoothScroll();
+    $('#get-started-button, #learn-more').smoothScroll();
+
 });
 
