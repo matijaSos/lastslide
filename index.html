@@ -110,12 +110,16 @@
                                 autocorrect="off"
                                 autocapitalize="off"
                                 spellcheck="false">
-                        <input id="claim-username-button" class="signup-form-button" type="submit" value="Claim">
+                        <button id="claim-username-button" type="submit" class="signup-form-button ladda-button" 
+                            data-style="slide-left"
+                            data-spinner-color="#786DD1">
+                            <span class="ladda-label">Claim</span>
+                        </button>
                     </div>
                     <div class="error-msg"></div>
                 </form>
 
-                <form class="form-step-2">
+                <form id="how-many-pres-form" class="form-step-2">
                     <div class="step-indicator">Step 2 of 4</div>
                     <h4>Great, <span class="ls-username"></span>, you're almost there!</h4>
                     <h5>Please help us learn a bit more about yourself.</h5>
@@ -129,7 +133,7 @@
                     </div>
                 </form>
 
-                <form class="form-step-3">
+                <form id="when-next-pres-form" class="form-step-3">
                     <div class="step-indicator">Step 3 of 4</div>
                     <h4>Great, <span class="ls-username"></span>, you're almost there!</h4>
                     <h5>Please help us learn a bit more about yourself.</h5>

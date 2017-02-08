@@ -2,6 +2,8 @@
 $(document).ready(function() {
 
     var username = '';
+    var numSpeechesPerYear = '';
+    var nextSpeechDate = '';
 
     var step = 1;
     function goToNextStep () {
@@ -21,6 +23,7 @@ $(document).ready(function() {
 
     var jForm = $(this).find('#submit-email-form');
     var spinner = $('#signup-button').ladda();
+    var claimUsernameSpinner = $('#claim-username-button').ladda();
 
     var submitEmail = function () {
       var inputElement = $('#signup-email-input');
@@ -37,7 +40,13 @@ $(document).ready(function() {
       }
 
       // Make request
-      $.post('http://api.talkbook.co/subscribe/lastslide', {email: email, username: username})
+      $.post('http://api.talkbook.co/subscribe/lastslide', 
+        {
+            email: email, 
+            username: username,
+            numSpeechesPerYear: numSpeechesPerYear,
+            nextSpeechDate: nextSpeechDate
+        })
         .done(function(data) {
           if (data && data.code === 200) {
             goToNextStep();
@@ -79,16 +88,37 @@ $(document).ready(function() {
         inputElement.addClass('error');
         errorMsgElement.text('Alphanumeric characters only!').show();
       } else {
-        // Write that username in html.
-        $('.ls-username').text(username);
-        goToNextStep();
+
+        claimUsernameSpinner.ladda('start');
+        // Check if username is available.
+        $.get('http://api.talkbook.co/lastslide/username/' + username + '/exists')
+          .done(function(response){
+            if (response.data === false) {
+              // Write that username in html.
+              $('.ls-username').text(username);
+              goToNextStep();
+            } else {
+              errorMsgElement.text('Username already taken!').show();
+            }
+          })
+          .fail(function() {
+            errorMsgElement.text('Error occurred, please try again').show();
+          })
+          .always(function() {
+            claimUsernameSpinner.ladda('stop');
+          });
       }
     });
 
     // ---------- Submit survey answer ------------ //
     
-    $('#signup-form .option').off('click').on('click', function (event) {
-      // Do something with $(this).text()
+    $('#signup-form #how-many-pres-form .option').off('click').on('click', function (event) {
+      numSpeechesPerYear = $(this).text();
+      goToNextStep();
+    });
+
+    $('#signup-form #when-next-pres-form .option').off('click').on('click', function (event) {
+      nextSpeechDate = $(this).text();
       goToNextStep();
     });
 
