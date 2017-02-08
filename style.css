@@ -374,6 +374,13 @@ h5 {
     */
 }
 
+#signup-form .step-indicator {
+    font-size: 1.4rem;
+    margin: 1.1rem 0;
+
+    font-weight: 400;
+}
+
 /* ------ Step 1 ------ */
 
 #signup-form .claim-username-wrapper {
@@ -619,7 +626,9 @@ h5 {
     margin-top: 6rem;
     padding: 8rem 0;
 
-    background-color: #786DD1;
+    /*background-color: #786DD1;*/
+    /*background-color: #6960b7;*/
+    background-color: #5c54a0;
 }
 
 #claim-username h1 {
