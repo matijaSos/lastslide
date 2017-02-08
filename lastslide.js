@@ -68,7 +68,7 @@ $(document).ready(function() {
       $('#claim-username-form .error-msg').text('').hide();
     });
 
-    $('.form-step-1').submit(function (event) {
+    $('#claim-username-form').submit(function (event) {
       event.preventDefault();
       var inputElement = $('#claim-username-input');
       var errorMsgElement = $(this).find('.error-msg');
@@ -80,7 +80,7 @@ $(document).ready(function() {
         errorMsgElement.text('Alphanumeric characters only!').show();
       } else {
         // Write that username in html.
-        $('#ls-username').text(username);
+        $('.ls-username').text(username);
         goToNextStep();
       }
     });

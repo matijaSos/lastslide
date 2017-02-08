@@ -345,7 +345,8 @@ h5 {
     text-align: center;
 }
 
-#signup-form.step-2, #signup-form.step-3, #signup-form.step-4 {
+#signup-form.step-2, #signup-form.step-3, 
+#signup-form.step-4, #signup-form.step-5 {
     background-color: rgba(255,255,255,.08);
 }
 
@@ -401,7 +402,7 @@ h5 {
 
 /* ------ Step 2 ------ */
 
-#signup-form #ls-username {
+#signup-form .ls-username {
     font-weight: 400;
 }
 
@@ -468,6 +469,9 @@ h5 {
     display: none;
 }
 #signup-form.step-4 form:not(.form-step-4){
+    display: none;
+}
+#signup-form.step-5 form:not(.form-step-5){
     display: none;
 }
 
