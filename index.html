@@ -88,7 +88,7 @@
             <p>... and use it on every presentation!</p>
 
             <div id="signup-form" class="step-1">
-                <form class="form-step-1">
+                <form id="claim-username-form" class="form-step-1">
                     <div class="claim-username-wrapper">
                         <span id="getslides-url">getslid.es/</span>
                         <input id="claim-username-input" class="signup-form-input" 
@@ -128,11 +128,7 @@
                                 spellcheck="false">
                         <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
                     </div>
-
-                    <!-- TODO(matija): Put this somewhere appropriate -->
-                    <!--
-                    <div class="subscribe-fail">Hey I failed</div>
-                    -->
+                    <div class="error-msg"></div>
                 </form>
 
                 <form class="form-step-4">

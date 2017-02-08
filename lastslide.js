@@ -25,14 +25,17 @@ $(document).ready(function() {
     //var spinner = Ladda.create(jForm.find('button.submit')[0]);
 
     var submitEmail = function () {
-      jFail.text('').hide();
+      var inputElement = $('#signup-email-input');
+      var errorMsgElement = $('#submit-email-form .error-msg');
+
+      //jFail.text('').hide();
       //spinner.start();
 
       var email = jForm.find('#signup-email-input').val();
       console.log('email is: ' + email);
 
       if (!validateEmail(email)) {
-        jFail.text('Please enter valid email address').show();
+        inputElement.addClass('error');
         //spinner.stop();
         return;
       }
@@ -43,18 +46,19 @@ $(document).ready(function() {
           if (data && data.code === 200) {
             //showSubscriptionSuccessfulMessage();
             console.log('everything was successful');
+            goToNextStep();
           } else {
             if (data && data.error && data.error.title && data.error.title.indexOf('Member Exists') !== -1) {
-              jFail.text('You have already signed up!').show();
+              errorMsgElement.text('Email already used!').show();
             } else {
               // Something is wrong, but not 'member exists'. Output error message?
-              jFail.text('Something is wrong').show();
+              errorMsgElement.text('Error occurred, please try again').show();
             }
           }
         })
         .fail(function() {
           // Did not get response from server.
-          jFail.text('There was an error, please try again.').show();
+          errorMsgElement.text('Error occurred, please try again').show();
         })
         .always(function() {
           //spinner.stop();
@@ -67,7 +71,7 @@ $(document).ready(function() {
 
     $('#claim-username-input').on('keydown', function (event) {
       $(this).removeClass('error');
-      $('#signup-form .error-msg').text('').hide();
+      $('#claim-username-form .error-msg').text('').hide();
     });
 
     $('.form-step-1').submit(function (event) {
@@ -88,9 +92,6 @@ $(document).ready(function() {
         inputElement.addClass('error');
         // Show error msg
         errorMsgElement.text('Alphanumeric characters only!').show();
-
-
-
       } else {
         // Write that username in html.
         $('#ls-username').text(username);
@@ -106,12 +107,16 @@ $(document).ready(function() {
     });
 
     // ---------- Submit email ------------ //
+    $('#signup-email-input').on('keydown', function (event) {
+      $(this).removeClass('error');
+      $('#submit-email-form .error-msg').text('').hide();
+    });
 
     $('#submit-email-form').submit(function (event) {
       event.preventDefault();
       submitEmail();
       // TODO(matija): go to next step only if everything is ok, call it from submitEmail method?
-      goToNextStep();
+      //goToNextStep();
     });
 });
 
