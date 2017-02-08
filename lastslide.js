@@ -20,23 +20,19 @@ $(document).ready(function() {
     }
 
     var jForm = $(this).find('#submit-email-form');
-    var jFail = $(this).find('.subscribe-fail');
-
-    //var spinner = Ladda.create(jForm.find('button.submit')[0]);
+    var spinner = $('#signup-button').ladda();
 
     var submitEmail = function () {
       var inputElement = $('#signup-email-input');
       var errorMsgElement = $('#submit-email-form .error-msg');
 
-      //jFail.text('').hide();
-      //spinner.start();
+      spinner.ladda('start');
 
       var email = jForm.find('#signup-email-input').val();
-      console.log('email is: ' + email);
 
       if (!validateEmail(email)) {
         inputElement.addClass('error');
-        //spinner.stop();
+        spinner.ladda('stop');
         return;
       }
 
@@ -44,8 +40,6 @@ $(document).ready(function() {
       $.post('http://api.talkbook.co/subscribe/lastslide', {email: email, username: username})
         .done(function(data) {
           if (data && data.code === 200) {
-            //showSubscriptionSuccessfulMessage();
-            console.log('everything was successful');
             goToNextStep();
           } else {
             if (data && data.error && data.error.title && data.error.title.indexOf('Member Exists') !== -1) {
@@ -61,7 +55,7 @@ $(document).ready(function() {
           errorMsgElement.text('Error occurred, please try again').show();
         })
         .always(function() {
-          //spinner.stop();
+          spinner.ladda('stop');
         });
     };
 
@@ -79,18 +73,10 @@ $(document).ready(function() {
       var inputElement = $('#claim-username-input');
       var errorMsgElement = $(this).find('.error-msg');
 
-      console.log('error element step 1: ');
-      console.log(errorMsgElement);
-      
       username = inputElement.val();
       // Validate username.
-      console.log(username);
       if (!validateUsername(username)) {
-        console.log('username not valid! Must be alphanumeric');
-
-        // Set error class
         inputElement.addClass('error');
-        // Show error msg
         errorMsgElement.text('Alphanumeric characters only!').show();
       } else {
         // Write that username in html.
@@ -107,6 +93,7 @@ $(document).ready(function() {
     });
 
     // ---------- Submit email ------------ //
+
     $('#signup-email-input').on('keydown', function (event) {
       $(this).removeClass('error');
       $('#submit-email-form .error-msg').text('').hide();
@@ -115,8 +102,6 @@ $(document).ready(function() {
     $('#submit-email-form').submit(function (event) {
       event.preventDefault();
       submitEmail();
-      // TODO(matija): go to next step only if everything is ok, call it from submitEmail method?
-      //goToNextStep();
     });
 });
 

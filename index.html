@@ -11,6 +11,12 @@
     <!-- TODO(matija): I took this version from Kite. Which version should I be using? -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
+    <!-- Ladda stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Ladda/1.0.0/ladda-themeless.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Ladda/1.0.0/spin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Ladda/1.0.0/ladda.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Ladda/1.0.0/ladda.jquery.min.js"></script>
+
     <!-- TODO(matija): This will have to be minified -->
     <script type="text/javascript" src="lastslide.js"></script>
 
@@ -126,7 +132,14 @@
                                 autocorrect="off"
                                 autocapitalize="off"
                                 spellcheck="false">
+                        <!--
                         <input id="signup-button" class="signup-form-button" type="submit" value="Sign up">
+                        -->
+                        <button id="signup-button" type="submit" class="signup-form-button ladda-button" 
+                            data-style="slide-left"
+                            data-spinner-color="#786DD1">
+                            <span class="ladda-label">Sign up</span>
+                        </button>
                     </div>
                     <div class="error-msg"></div>
                 </form>
