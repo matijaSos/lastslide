@@ -89,20 +89,23 @@
 
             <div id="signup-form" class="step-1">
                 <form class="form-step-1">
-                    <span id="getslides-url">getslid.es/</span>
-                    <input id="claim-username-input" class="signup-form-input" 
-                            type="text" name="username" 
-                            placeholder="username"
-                            size="15"
-                            autocorrect="off"
-                            autocapitalize="off"
-                            spellcheck="false">
-                    <input id="claim-username-button" class="signup-form-button" type="submit" value="Claim">
+                    <div class="claim-username-wrapper">
+                        <span id="getslides-url">getslid.es/</span>
+                        <input id="claim-username-input" class="signup-form-input" 
+                                type="text" name="username" 
+                                placeholder="username"
+                                size="15"
+                                autocorrect="off"
+                                autocapitalize="off"
+                                spellcheck="false">
+                        <input id="claim-username-button" class="signup-form-button" type="submit" value="Claim">
+                    </div>
+                    <div class="error-msg"></div>
                 </form>
 
                 <form class="form-step-2">
-                    <h4>Great, we're preparing your invite!</h4>
-                    <h5>Selecting your preferences below will expedite your invitation - please feel free to share!</h5>
+                    <h4>Great, <span id="ls-username"></span>, we're preparing your invite!</h4>
+                    <h5>Please help us learn a bit more about yourself.</h5>
                     <div class="survey">
                         <p>How many presentations do you give per year?</p>
                         <div class="options">

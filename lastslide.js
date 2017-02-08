@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
 
+    var username = '';
+
     var step = 1;
     function goToNextStep () {
       $('#signup-form').removeClass('step-' + step++).addClass('step-' + step);
@@ -9,6 +11,12 @@ $(document).ready(function() {
     function validateEmail(email) {
       var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
       return re.test(email);
+    }
+
+    function validateUsername(username) {
+      // Alphanumeric only.
+      var re = /^([0-9]|[a-z])+([0-9a-z]+)$/i;
+      return re.test(username);
     }
 
     var jForm = $(this).find('#submit-email-form');
@@ -30,7 +38,7 @@ $(document).ready(function() {
       }
 
       // Make request
-      $.post('http://api.talkbook.co/subscribe/lastslide', {email: email})
+      $.post('http://api.talkbook.co/subscribe/lastslide', {email: email, username: username})
         .done(function(data) {
           if (data && data.code === 200) {
             //showSubscriptionSuccessfulMessage();
@@ -55,17 +63,51 @@ $(document).ready(function() {
 
     // -------------------- //
 
-    $('.form-step-1').submit(function (event) {
-      event.preventDefault();
-      goToNextStep();
+    // ---------- Claim username ------------ //
+
+    $('#claim-username-input').on('keydown', function (event) {
+      $(this).removeClass('error');
+      $('#signup-form .error-msg').text('').hide();
     });
 
+    $('.form-step-1').submit(function (event) {
+      event.preventDefault();
+      var inputElement = $('#claim-username-input');
+      var errorMsgElement = $(this).find('.error-msg');
+
+      console.log('error element step 1: ');
+      console.log(errorMsgElement);
+      
+      username = inputElement.val();
+      // Validate username.
+      console.log(username);
+      if (!validateUsername(username)) {
+        console.log('username not valid! Must be alphanumeric');
+
+        // Set error class
+        inputElement.addClass('error');
+        // Show error msg
+        errorMsgElement.text('Alphanumeric characters only!').show();
+
+
+
+      } else {
+        // Write that username in html.
+        $('#ls-username').text(username);
+        goToNextStep();
+      }
+    });
+
+    // ---------- Submit survey answer ------------ //
+    
     $('#signup-form .option').off('click').on('click', function (event) {
       // Do something with $(this).text()
       goToNextStep();
     });
 
-    $('.form-step-3').submit(function (event) {
+    // ---------- Submit email ------------ //
+
+    $('#submit-email-form').submit(function (event) {
       event.preventDefault();
       submitEmail();
       // TODO(matija): go to next step only if everything is ok, call it from submitEmail method?

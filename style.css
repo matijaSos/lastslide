@@ -356,8 +356,27 @@ h5 {
     margin-top: 1rem;
 }
 
+/* ------ Steps ------ */
+
+#signup-form .signup-form-input.error {
+    border: 1px solid red!important;
+}
+
+#signup-form .error-msg {
+    margin-top: 1rem;
+
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #FFF;
+    /*
+    color: #FFE400;
+    */
+}
+
 /* ------ Step 1 ------ */
-#signup-form .form-step-1 {
+
+#signup-form .claim-username-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,6 +393,11 @@ h5 {
 }
 
 /* ------ Step 2 ------ */
+
+#signup-form #ls-username {
+    font-weight: 400;
+}
+
 #signup-form .survey {
     text-align: left;
     padding: 1rem;
