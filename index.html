@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NOTE(matija): max-scale and user-scalable ensure iOS does not zoom in on input fields. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -103,7 +104,6 @@
                         <input id="claim-username-input" class="signup-form-input" 
                                 type="text" name="username" 
                                 placeholder="username"
-                                size="15"
                                 autocorrect="off"
                                 autocapitalize="off"
                                 spellcheck="false">
@@ -113,7 +113,7 @@
                 </form>
 
                 <form class="form-step-2">
-                    <h4>Great, <span id="ls-username"></span>, we're preparing your invite!</h4>
+                    <h4>Great, <span id="ls-username"></span>, you're almost there!</h4>
                     <h5>Please help us learn a bit more about yourself.</h5>
                     <div class="survey">
                         <p>How many presentations do you give per year?</p>

@@ -514,11 +514,14 @@ h5 {
 #signup-form #claim-username-input {
     margin-right: 1.5rem;
     margin-left: 0.5rem;
-    width: 100%;
+    /* NOTE(matija): to avoid overlays in Safari. */
+    width: 60%;
 }
 
 #signup-form #signup-email-input {
     margin-right: 1.5rem;
+    /* NOTE(matija): input too big on Android otherwise. */
+    width: 70%;
 }
 
 #bitly-url {
