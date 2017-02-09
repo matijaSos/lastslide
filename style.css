@@ -705,3 +705,37 @@ h5 {
 .footer .footer-menu nav a:not(.signup) {
     opacity: .5;
 }
+
+/* ----- With love from Croatia ----- */
+
+.footer .with-love-from-cro {
+    color: #083148;
+    font-size: 1.5rem;
+
+    padding: 1rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+
+}
+
+/* ----- Mini logo ----- */
+
+.footer .color-separation {
+    padding: 1rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.footer .mini-logo {
+    width: 37px;
+    height: 34px;
+
+    background-image: url(assets/mini-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+    vertical-align: middle;
+}

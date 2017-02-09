@@ -137,6 +137,7 @@ $(document).ready(function() {
     // ----------- Smooth scrolling ---------- //
     $('#hero nav a').smoothScroll();
     $('#get-started-button, #learn-more').smoothScroll();
+    $('#footer-section nav a').smoothScroll();
 
 });
 
