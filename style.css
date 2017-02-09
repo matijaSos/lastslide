@@ -101,6 +101,10 @@ h5 {
     }
     /* ---------------------------------------------- */
 
+    #features-heading {
+        margin-bottom: 6rem!important;
+    }
+
     .feature {
         /* NOTE(matija): !important to override 6rem. Not sure if the best way, but this is how Kite did it. */
         padding-bottom: 2rem!important;
@@ -139,11 +143,11 @@ h5 {
         font-size: 2.3rem!important;
     }
 
-    #hiw-heading-class {
+    .section-heading-class {
         font-size: 2.2rem!important;
 
     }
-    #hiw-heading-title {
+    .section-heading-title {
         font-size: 3.5rem!important;
     }
 
@@ -551,11 +555,11 @@ h5 {
     margin-top: 8rem;
 }
 
-#how-it-works-heading {
+.section-heading {
     text-align: center;
 }
 
-#how-it-works-heading #hiw-heading-class {
+.section-heading .section-heading-class {
     color: rgba(0,0,0,.35);
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -564,7 +568,7 @@ h5 {
     margin-bottom: 0.5rem;
 }
 
-#how-it-works-heading #hiw-heading-title {
+.section-heading .section-heading-title {
     color: #545454;
     font-weight: 300;
     font-size: 3.3rem;
@@ -628,6 +632,7 @@ h5 {
 
 #claim-username {
     margin-top: 6rem;
+    margin-bottom: 8rem;
     padding: 8rem 0;
 
     /*background-color: #786DD1;*/
