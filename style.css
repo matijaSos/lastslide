@@ -367,6 +367,10 @@ h5 {
     border: 1px solid red!important;
 }
 
+#signup-form .signup-form-input.warning {
+    border: 1px solid #FFD600!important;
+}
+
 #signup-form .error-msg {
     margin-top: 1rem;
 

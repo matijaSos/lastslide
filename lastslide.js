@@ -74,6 +74,7 @@ $(document).ready(function() {
 
     $('#claim-username-input').on('keydown', function (event) {
       $(this).removeClass('error');
+      $(this).removeClass('warning');
       $('#claim-username-form .error-msg').text('').hide();
     });
 
@@ -99,10 +100,12 @@ $(document).ready(function() {
               goToNextStep();
             } else {
               errorMsgElement.text('Username already taken!').show();
+              inputElement.addClass('warning');
             }
           })
           .fail(function() {
             errorMsgElement.text('Error occurred, please try again').show();
+            inputElement.addClass('error');
           })
           .always(function() {
             claimUsernameSpinner.ladda('stop');
