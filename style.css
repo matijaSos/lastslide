@@ -592,6 +592,9 @@ h5 {
 #how-it-works-steps .hiw-step {
     /*border: 1px solid #FF0000;*/
 
+    /* So I can position timeline points absolutely. */
+    position: relative;
+
     text-align: center;
     padding: 1.5rem 4rem;
 
@@ -612,7 +615,34 @@ h5 {
     letter-spacing: .4px;
     text-transform: uppercase;
 
+    margin-top: 5rem;
     margin-bottom: 1.5rem;
+}
+
+/* Timeline points */
+.hiw-step::before {
+    content: '';
+
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+
+    position: absolute;
+    /* TODO(Matija): Is there a better way to center element horizontally?
+     * This way it's dependent on the element's width.
+     */
+    left: 50%;
+    margin-left: -0.6rem;
+    /* -- */
+
+    /* TODO(Matija): This will depend on the media query, move it there.
+     * (img height) + (half circle height) + (half margin) = 25 + 0.6 + 2.5
+     */
+    top: 28.1rem;
+
+    background-color: #FFF;
+    border: 2px solid #1677BE;
 }
 
 /* ------------- Styling of a single "How it works" step ------------- */
