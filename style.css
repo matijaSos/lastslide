@@ -557,6 +557,7 @@ h5 {
 
 #how-it-works {
     margin-top: 8rem;
+    position: relative;
 }
 
 .section-heading {
@@ -587,7 +588,35 @@ h5 {
     display: -webkit-flex;
 
     margin-top: 6rem;
+
+    /* TODO(Matija): Also specify under appropriate media query. */
+    background-image: url(assets/timeline-line-no-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 28.8rem;
 }
+
+/* Timeline arrow 
+ * TODO(matija): not really working right now.
+ */
+/*
+#how-it-works-steps::after {
+    content: '';
+
+
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+
+    position: absolute;
+    top: 40.5rem;
+    right: 0;
+
+    background-image: url(assets/timeline-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+*/
 
 #how-it-works-steps .hiw-step {
     /*border: 1px solid #FF0000;*/
