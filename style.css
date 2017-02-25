@@ -70,6 +70,30 @@ h5 {
         /* For Safari, TODO: use autoprefixer for this */
         -webkit-order: 2;
     }
+
+    /* ------ Timeline positioning ------ */
+
+    /* Timeline points */
+    .hiw-step::before {
+        /* TODO(Matija): Is there a better way to center element horizontally?
+         * This way it's dependent on the element's width.
+         */
+        left: 50%;
+        margin-left: -0.6rem;
+
+        /*
+         * (img height) + (half circle height) + (half margin) = 25 + 0.6 + 2.5
+         */
+        top: 28.1rem;
+    }
+
+    #how-it-works-steps {
+        background-image: url(assets/timeline-line.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 28.8rem;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -169,7 +193,6 @@ h5 {
         margin-bottom: 6rem!important;
     }
     /* ---------------------------------------------- */
-
 }
 
 #hero {
@@ -588,12 +611,6 @@ h5 {
     display: -webkit-flex;
 
     margin-top: 6rem;
-
-    /* TODO(Matija): Also specify under appropriate media query. */
-    background-image: url(assets/timeline-line-no-arrow.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 28.8rem;
 }
 
 /* Timeline arrow 
@@ -658,17 +675,6 @@ h5 {
     border-radius: 50%;
 
     position: absolute;
-    /* TODO(Matija): Is there a better way to center element horizontally?
-     * This way it's dependent on the element's width.
-     */
-    left: 50%;
-    margin-left: -0.6rem;
-    /* -- */
-
-    /* TODO(Matija): This will depend on the media query, move it there.
-     * (img height) + (half circle height) + (half margin) = 25 + 0.6 + 2.5
-     */
-    top: 28.1rem;
 
     background-color: #FFF;
     border: 2px solid #1677BE;
