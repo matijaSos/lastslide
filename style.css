@@ -75,6 +75,9 @@ h5 {
 
     /* Timeline points */
     .hiw-step::before {
+        width: 1.2rem;
+        height: 1.2rem;
+
         /* TODO(Matija): Is there a better way to center element horizontally?
          * This way it's dependent on the element's width.
          */
@@ -106,7 +109,6 @@ h5 {
         /* For Safari, TODO: use autoprefixer for this */
         -webkit-flex-direction: column;
     }
-
 
     /* HACKY PART: Make "How it works" section bigger. */
     .hiw-step h4 {
@@ -143,6 +145,45 @@ h5 {
 
     .feature .container img {
         width: 90%;
+    }
+
+    /* ------ Timeline positioning ------ */
+
+    /* Timeline points */
+    .hiw-step::before {
+        width: 2rem;
+        height: 2rem;
+
+        /* TODO(Matija): Is there a better way to center element horizontally?
+         * This way it's dependent on the element's width.
+         */
+        left: 5rem;
+        margin-left: -1.2rem;
+
+        top: 43rem;
+    }
+
+    /* Timeline line */
+    #how-it-works-steps {
+        background-image: url(assets/timeline-line-vertical.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* Start with the same y as the first point. */
+        background-position: 5rem 43rem;
+    }
+
+    /* Align content to the timeline. */
+    .hiw-step {
+        text-align: left!important;
+        padding-left: 9rem!important;
+    }
+
+    /* ---- */
+
+    /* Timeline point is on a different position, so we can reduce
+     * the spacing. */
+    .hiw-step .hiw-step-title {
+        margin: 1.5rem 0!important;
     }
 }
 
@@ -670,8 +711,6 @@ h5 {
     content: '';
 
     display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
     border-radius: 50%;
 
     position: absolute;
