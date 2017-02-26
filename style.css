@@ -160,7 +160,7 @@ h5 {
         left: 5rem;
         margin-left: -1.2rem;
 
-        top: 43rem;
+        top: 3rem;
     }
 
     /* Timeline line */
@@ -169,13 +169,24 @@ h5 {
         background-size: contain;
         background-repeat: no-repeat;
         /* Start with the same y as the first point. */
-        background-position: 5rem 43rem;
+        background-position: 5rem 3rem;
     }
 
     /* Align content to the timeline. */
     .hiw-step {
         text-align: left!important;
         padding-left: 9rem!important;
+
+        align-items: flex-start!important;
+    }
+
+    /* Inverse order of image & description of the hiw-step. */
+    .hiw-step img {
+        order: 1;
+        /* For Safari, TODO: use autoprefixer for this */
+        -webkit-order: 1;
+
+        margin-top: 1.5rem;
     }
 
     /* ---- */
@@ -688,6 +699,10 @@ h5 {
     flex-grow: 1;
     /* For Safari, TODO: use autoprefixer for this */
     -webkit-flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hiw-step .hiw-step-title {
