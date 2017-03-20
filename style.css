@@ -691,11 +691,6 @@ h5 {
     width: 70%;
 }
 
-#bitly-url {
-    font-style: italic;
-    font-weight: 300;
-}
-
 #getslides-url {
     font-size: 2.2rem;
     font-weight: normal; /* 300 for thinner. */
